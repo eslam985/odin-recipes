@@ -13,36 +13,6 @@ body {
     font-family: Arial, sans-serif;
 }
 
-h1,
-h2,
-h3 {
-    text-align: center;
-    padding: 20px;
-    background-color: #005170;
-    color: #fff;
-    text-decoration: none;
-
-}
-
-
-
-p {
-    text-align: center;
-    color: #005170;
-    width: 45%;
-    margin: auto;
-    font-size: 20px;
-    line-height: 1.7;
-
-}
-
-a {
-    text-decoration: none;
-    text-align: center;
-    color: #005170;
-    font-size: 20px;
-}
-
 .container {
     width: 80%;
     margin: auto;
@@ -53,16 +23,25 @@ a {
     gap: 20px;
 }
 
-.image {
-    height: 350px;
+
+.one-child {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+/* تنسيق الصورة الأساسي */
+.one-child .image {
+    max-width: 350px;
+    width: 100%;
+    height: auto;
     margin: auto;
 }
 
-img {
-    width: 350px;
-    height: 350px;
+.one-child .image img {
+    width: 100%;
+    height: auto;
     border-radius: 10%;
-    padding: 20px;
 }
 
 .Parent {
@@ -71,15 +50,26 @@ img {
     margin: auto;
 }
 
+
+
+a {
+    text-decoration: none;
+    text-align: center;
+    color: #005170;
+    font-size: 20px;
+}
+
+
 .left-child {
     flex-basis: 30%;
 }
 
 
 .right-child {
-    width: 60%;
+    width: 65%;
 
 }
+
 
 li {
     color: #004662;
@@ -100,4 +90,168 @@ li {
     font-size: 24px;
     border: #0050705d 1px solid;
 
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+    padding: 20px;
+    background-color: #005170;
+    color: #fff;
+    text-decoration: none;
+
+}
+
+.Parent p {
+    color: #005170;
+    width: 50%;
+    margin: auto;
+    font-size: 20px;
+    line-height: 1.7;
+}
+
+.one-child p {
+    color: #005170;
+    width: 40%;
+    margin: auto;
+    font-size: 20px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+@media (min-width: 601px) and (max-width: 1062px) {
+    .container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    /* .one-child .image {
+        width: 30%;
+        margin: auto;
+
+    }
+
+    .one-child .image img {
+        width: 100%;
+        height: 30vh;
+        padding: 0;
+    } */
+
+    .one-child .image {
+        width: 250px;
+        height: 250px;
+        margin: auto;
+
+    }
+
+    .one-child .image img {
+        width: 100%;
+        height: 250px;
+        border-radius: 10%;
+    }
+
+    .Parent {
+
+        gap: 5px;
+    }
+
+    .two-child ul {
+
+        width: 100%;
+    }
+
+    .right-child {
+        width: 65%;
+
+    }
+
+
+
+    li {
+        width: 100%;
+    }
+
+    h1,
+    h2,
+    h3 {
+        padding: 10px;
+    }
+
+    .Parent p,
+    .one-child p {
+        width: 55%;
+        margin: auto;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+}
+
+
+
+
+
+/* small screen */
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        margin: auto;
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Parent {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .one-child {
+        flex-direction: column-reverse;
+    }
+
+
+    /* اجعل الصورة تأخذ عرض الأب بالكامل */
+    .one-child .image {
+        max-width: 90%;
+        height: auto;
+    }
+
+    /* يمكنك استخدام الـ height: 40vh; هنا للتحكم بارتفاع الصورة بشكل جيد */
+    .one-child .image img {
+        height: 40vh;
+        object-fit: cover;
+    }
+
+    ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    ol {
+        width: 100%;
+    }
+
+    li {
+        width: 100%;
+        margin: auto;
+        padding: 10px;
+    }
+
+
+    h1,
+    h2,
+    h3 {
+        padding: 10px;
+    }
+
+    .Parent p,
+    .one-child p {
+        width: 90%;
+        padding: 15px;
+        font-size: 16px;
+        line-height: 1.5;
+    }
 }
