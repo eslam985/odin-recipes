@@ -1,0 +1,57 @@
+/* main styles */
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+    background-color: #005170;
+    color: #fff;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 50px;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+li {
+    display: flex;
+
+    width: 48%;
+    list-style: none;
+}
+
+
+a {
+    text-decoration: none;
+    text-align: center;
+    color: #005170;
+    font-size: 20px;
+}
+
+img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    padding: 20px;
+    border-radius: 10%;
+}
